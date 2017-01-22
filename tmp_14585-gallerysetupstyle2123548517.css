@@ -1,0 +1,63 @@
+/* the A tag */
+	.album 
+		{ 
+  		position: relative; 
+  		z-index: 5; width: 250px; 
+  		vertical-align: top; 
+  		display:block;
+		} 
+/* the images */
+	.album img 
+		{
+  		position: absolute; top: 0; left: 0; 
+  		border: 5px solid #f3f3f3;
+  		box-shadow: 1px 1px 2px #666;
+  		width:250px; height:250px; 
+  		display:block;
+		}
+/* first image */ 
+@keyframes image1 
+{ 0%  
+  {
+    transform: rotate(0deg) translate(0, 0) scale(1.0); } 100%
+  { transform: rotate(-6deg) translate(-100px, -3px) scale(1.1); } } 
+/* second image:  webkit */
+@keyframes image2 { 0%   { transform: rotate(0deg) translate(0, 0) scale(1.0); 
+  } 
+  100%
+  { 
+    transform: rotate(0deg) translate(0, -3px) scale(1.1); 
+  }
+} 
+/* third image:  webkit */
+@keyframes image3 
+{ 
+  0%  
+  { 
+    transform: rotate(0deg) translate(0, 0) scale(1.0);
+  } 
+  100% 
+  {
+    transform: rotate(6deg) translate(100px, -3px) scale(1.1); 
+  } 
+}
+
+/* first image animation properties */
+	.album:hover	.photo1	.album:focus .photo1
+{
+  /* animation properties */ 
+  animation-name: image1;
+  animation-duration: .2s;
+  transform: rotate(-6deg) translate(-100px, -3px) scale(1.1);
+  
+  /* microsoft animation properties */
+  
+  -ms-transform: rotate(-6deg) translate(-100px, -3px) scale(1.1);
+} 
+
+/* second image animation properties */
+
+.album:hover .photo2, .album:focus .photo2
+
+{ 
+  /* animation properties */ animation-name: image2; animation-duration: .2s; transform: rotate(0deg) translate(0, -3px) scale(1.1); /* microsoft animation properties */ -ms-transform: rotate(0deg) translate(0, -3px) scale(1.1); } /* third image animation properties */ .album:hover .photo3, .album:focus .photo3 { /* animation properties */ animation-name: image3; animation-duration: .2s; transform: rotate(-6deg) translate(-100px, -3px) scale(1.1); /* microsoft animation properties */ -ms-transform: rotate(6deg) translate(100px, -3px) scale(1.1); }
